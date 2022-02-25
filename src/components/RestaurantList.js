@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import { Card, Rate, Col, Row } from 'antd';
+// import { useNavigate } from 'react-router-dom';
 
 const { Meta } = Card;
 
 export default function RestaurantList() {
   const [restaurants, setRestaurants] = useState([]);
+  //   const navigate = useNavigate();
 
   useEffect(() => {
     fetch('https://bocacode-intranet-api.web.app/restaurants')
@@ -19,7 +21,12 @@ export default function RestaurantList() {
       <Row gutter={16}>
         {restaurants.map((restaurant) => {
           return (
-            <Col span={8}>
+            <Col
+              span={8}
+              //   onClick={() => {
+              //     navigate('/restaurant/:id');
+              //   }}
+            >
               <Card
                 key={restaurant.id}
                 hoverable

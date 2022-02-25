@@ -1,22 +1,18 @@
 import './App.css';
 import { Layout } from 'antd';
+// import { Routes, Route } from 'react-router-dom';
 import Main from './components/Main';
-
-const styles = {
-  header: {
-    position: 'fixed',
-    zIndex: 10,
-    width: '100%',
-    color: 'white',
-  },
-  content: { padding: '0 50px', marginTop: 64 },
-};
+// import RestaurantRating from './components/RestaurantRating';
 
 function App() {
   return (
     <Layout>
-      <Layout.Header style={styles.header}>Restaurants List</Layout.Header>
-      <Layout.Content style={styles.content}>
+      <Layout.Header className='header'>Restaurant Ratings</Layout.Header>
+      <Layout.Content className='content'>
+        {/* <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/restaurant/:id' element={<RestaurantRating />} />
+        </Routes> */}
         <Main />
       </Layout.Content>
       <Layout.Footer>&copy; 2022, Christian Klein</Layout.Footer>
