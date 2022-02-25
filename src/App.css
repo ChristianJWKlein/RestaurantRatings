@@ -2,3 +2,8 @@
   max-width: 900;
   margin: 40px auto;
 }
+
+.ant-card-cover > * {
+  height: 200px;
+  object-fit: cover;
+}

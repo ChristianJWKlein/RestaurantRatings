@@ -23,7 +23,7 @@ export default function RestaurantList() {
               <Card
                 key={restaurant.id}
                 hoverable
-                style={{ width: 260, margin: 20 }}
+                className='ant-card-cover'
                 cover={
                   <img
                     alt={`Shots of ${restaurant.name}`}
