@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { Layout } from 'antd';
+import Main from './components/Main';
+
+const styles = {
+  header: {
+    position: 'fixed',
+    zIndex: 10,
+    width: '100%',
+    color: 'white',
+  },
+  content: { padding: '0 50px', marginTop: 64 },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Layout.Header style={styles.header}>Restaurants List</Layout.Header>
+      <Layout.Content style={styles.content}>
+        <Main />
+      </Layout.Content>
+      <Layout.Footer>&copy; 2022, Christian Klein</Layout.Footer>
+    </Layout>
   );
 }
 
