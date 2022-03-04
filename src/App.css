@@ -1,24 +1,99 @@
-.card-wrapper {
-  max-width: 900;
-  margin: 40px auto;
+.ant-layout-header {
+  height: 74px;
+  display: flex;
+  align-items: center; /* this is vertically */
+  justify-content: center; /* this is for horizontally*/
+  background: rgb(140, 139, 139);
+  background: linear-gradient(
+    90deg,
+    rgba(140, 139, 139, 0.9346332282913166) 0%,
+    rgba(164, 159, 162, 0.9458377100840336) 48%,
+    rgba(172, 167, 170, 0.9514399509803921) 100%
+  );
+  text-align: center;
+  font-size: large;
+  line-height: 1;
 }
 
-.ant-card-cover > * {
+.ant-layout-header svg {
+  align-self: center;
+}
+
+.cards-wrapper {
+  margin: 90px auto 20px;
+}
+
+.cards-wrapper .ant-row {
+  display: flex;
+  justify-content: center;
+}
+
+.ant-col {
+  width: 25%;
+  box-sizing: border-box;
+  margin: 20px 15px;
+}
+
+.ant-card {
+  width: 100%;
+}
+
+.detail-wrapper {
+  max-width: 600px;
+  margin: 90px auto 20px;
+  background: rgb(233, 233, 233);
+  background: radial-gradient(
+    circle,
+    rgba(233, 233, 233, 0.9346332282913166) 0%,
+    rgba(227, 225, 226, 1) 48%,
+    rgba(172, 167, 170, 0.9514399509803921) 100%
+  );
+}
+
+.ant-card-cover img {
   height: 200px;
   object-fit: cover;
 }
 
-.header {
-  position: 'fixed';
-  z-index: 10;
-  width: '100%';
-  color: whitesmoke !important;
-  background-color: darkslategrey !important;
-  text-align: center;
-  font-size: 100;
+.detail-wrapper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.ant-card-meta-title {
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-.content {
-  padding: '0 50px';
-  margin-top: 64;
+.restaurant-detail-wrapper {
+  padding: 30px;
+}
+
+@media screen and (max-width: 580px) {
+  .ant-col {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 581px) {
+  .ant-col {
+    width: 40%;
+  }
+  .ant-card-meta-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .ant-col {
+    width: 29%;
+  }
+}
+
+.submit-rating {
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  color: rgb(254, 86, 67);
 }

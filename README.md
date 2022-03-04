@@ -1,4 +1,4 @@
-# Restaurant Rating List
+# Restaurant Ratings List
 
 To create react app
 
